@@ -1,21 +1,27 @@
 
 public class Main {
-	public static void email(String title, String address, String text) {
-		System.out.println(address + "に、以下のメールを送信しました");
-		System.out.println("件名：" + title);
-		System.out.println("本文："+ text);
+	public static double calcTriangleArea(double bottom, double height) {
+		double x = (bottom * height) /2;
+		return x;
 
 	}
 
-	public static void email(String address, String text) {
-		System.out.println(address + "に、以下のメールを送信しました");
-		System.out.println("件名：無題");
-		System.out.println("本文："+ text);
+	public static double calcCircleArea(double radius) {
+		double y = radius * radius * 3.14;
+		return y;
 	}
 
 	public static void main(String[] args) {
-		email("メールの宛先のアドレス", "メールの本文");
+		double bottom = 10.0;
+		double height = 5.0;
+		double x = calcTriangleArea(bottom, height);
 
+		double radius = 5.0;
+		double y = calcCircleArea(radius);
+
+		System.out.println("三角形の底辺の長さが" + bottom +
+				"㎝、高さが" + height + "㎝の場合、面積は" + x + "㎠");
+		System.out.println("円の半径が" + radius + "㎝の場合、面積は" + y + "㎠");
 	}
 
 }
